@@ -16,8 +16,8 @@
 - .Net Core 3.1
 - Application console
 - C# programming language
-- Google search API
-- Bing search API
+- Google Search - API
+- Bing Search v7 - API
 - Newtonsoft and System.Text.Json for deserializing JSON into C# objects
 
 
@@ -40,10 +40,10 @@
 - Install VS 2019 Community Edition and .Net Core 3.1 in your computer.
 - Clone this repository using **git clone** command and open the **SearchFight.NetCore.sln** file.
 - With a Google account, sign in and go to [Google - Programmable Search Engine (GPSE)](https://programmablesearchengine.google.com/).
-- Go to your [GPSE Console](https://cse.google.com/cse/all): Create a new Search Engine for any website, copy your **Search ID** and replace the variable **GOOGLE_CX** value in the **Constants.cs** file (which is in the **Search.Engine** directory).
-- Go to your [Google Developer Console](https://developers.google.com/custom-search/v1/overview): Click in **Get a Key**, copy your **Key** and replace the variable **GOOGLE_KEY** value in the **Constants.cs** file (mentioned above).
+- Go to your [GPSE Console](https://cse.google.com/cse/all): Create a new Search Engine for any website, copy your **Search ID** and replace the variable **GOOGLE_CX** value in the **App.config** file (which is in the **Search.Engine** directory).
+- Go to your [Google Developer Console](https://developers.google.com/custom-search/v1/overview): Click in **Get a Key**, copy your **Key** and replace the variable **GOOGLE_KEY** value in the **App.config** file (mentioned above).
 - With a Microsoft account, sign in and create an [Azure](https://azure.microsoft.com/en-us/) Account.
-- Go to your [Azure Console](https://portal.azure.com/#home): Create a **Bing Search v7**, copy one of the **Keys** and replace the variable **BING_OCP_APIM_SUBSCRIPTION_KEY** value in the **Constants.cs** file.
+- Go to your [Azure Console](https://portal.azure.com/#home): Create a **Bing Search v7**, copy one of the **Keys** and replace the variable **BING_OCP_APIM_SUBSCRIPTION_KEY** value in the **App.config** file.
 - Press **F5** to compile and start the solution.
 - In a **Command Prompt** Move to directory **SearchFight.NetCore/bin/Debug/netcoreapp3.1/**.
 - Run this example: ```SearchFight.NetCoreApp.exe "c sharp" python ruby perl```
