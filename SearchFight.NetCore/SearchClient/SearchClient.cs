@@ -8,14 +8,13 @@ using Newtonsoft.Json;
 
 namespace SearchFight.NetCoreApp
 {
-    interface ISearchClient
+    public interface ISearchClient
     {
         Task<String> MakeGetRequest(String endPoint, String action, Dictionary<String, String> headers, Dictionary<String, String> queryVars);
-        Task<DataTable> Search(String[] queries);        
-        String[] GetErrorsLog();
+        Task<DataTable> Search(String query);        
     }
 
-    public class SearchClient
+    public class SearchClient : ISearchClient
     {
         private List<String> errorsLog = new List<String>();
 
@@ -50,7 +49,7 @@ namespace SearchFight.NetCoreApp
             }
         }        
         
-        public virtual async Task<Int64> Search(String query)
+        public virtual async Task<DataTable> Search(String query)
         {
             Dictionary<String, String> headers = new Dictionary<String, String>();
             headers.Add("Authorization", AppConfig.GENERIC_AUTHORIZATION_KEY);
